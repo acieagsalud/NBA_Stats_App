@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_14_193533) do
+ActiveRecord::Schema.define(version: 2020_10_14_195645) do
 
   create_table "games", force: :cascade do |t|
     t.datetime "date"
@@ -40,6 +40,34 @@ ActiveRecord::Schema.define(version: 2020_10_14_193533) do
     t.index ["team_id"], name: "index_players_on_team_id"
   end
 
+  create_table "seasons", force: :cascade do |t|
+    t.integer "games_played"
+    t.integer "season"
+    t.string "min"
+    t.decimal "fgm"
+    t.decimal "fga"
+    t.decimal "fg3m"
+    t.decimal "fg3a"
+    t.decimal "ftm"
+    t.decimal "fta"
+    t.decimal "oreb"
+    t.decimal "dreb"
+    t.decimal "reb"
+    t.decimal "ast"
+    t.decimal "stl"
+    t.decimal "blk"
+    t.decimal "turnover"
+    t.decimal "pf"
+    t.decimal "pts"
+    t.decimal "fg_pct"
+    t.decimal "fg3_pct"
+    t.decimal "ft_pct"
+    t.integer "player_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_seasons_on_player_id"
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.string "abbreviation"
@@ -51,4 +79,5 @@ ActiveRecord::Schema.define(version: 2020_10_14_193533) do
   end
 
   add_foreign_key "players", "teams"
+  add_foreign_key "seasons", "players"
 end

@@ -1,0 +1,49 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  games_played: 1
+  season: 1
+  min: MyString
+  fgm: 9.99
+  fga: 9.99
+  fg3m: 9.99
+  fg3a: 9.99
+  ftm: 9.99
+  fta: 9.99
+  oreb: 9.99
+  dreb: 9.99
+  reb: 9.99
+  ast: 9.99
+  stl: 9.99
+  blk: 9.99
+  turnover: 9.99
+  pf: 9.99
+  pts: 9.99
+  fg_pct: 9.99
+  fg3_pct: 9.99
+  ft_pct: 9.99
+  player: one
+
+two:
+  games_played: 1
+  season: 1
+  min: MyString
+  fgm: 9.99
+  fga: 9.99
+  fg3m: 9.99
+  fg3a: 9.99
+  ftm: 9.99
+  fta: 9.99
+  oreb: 9.99
+  dreb: 9.99
+  reb: 9.99
+  ast: 9.99
+  stl: 9.99
+  blk: 9.99
+  turnover: 9.99
+  pf: 9.99
+  pts: 9.99
+  fg_pct: 9.99
+  fg3_pct: 9.99
+  ft_pct: 9.99
+  player: two
