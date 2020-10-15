@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_14_195645) do
+ActiveRecord::Schema.define(version: 2020_10_15_214136) do
 
   create_table "games", force: :cascade do |t|
     t.datetime "date"
     t.integer "home_team_score"
     t.integer "visitor_team_score"
     t.integer "season"
-    t.integer "home_team_id"
-    t.integer "visitor_team_id"
+    t.string "home_team_id"
+    t.string "visitor_team_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["home_team_id"], name: "index_games_on_home_team_id"
