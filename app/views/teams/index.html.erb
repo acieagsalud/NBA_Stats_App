@@ -1,15 +1,13 @@
-<h2>All 30 NBA Teams</h2>
+<h2>All NBA Teams</h2>
 
 <% if @teams.empty? %>
-  <p>There are no players in the league. Call Adam Silver ASAP!</p>
+ <p>There are no teams in the league. Call Adam Silver ASAP!</p>
 <% else %>
-  <% @teams.each do |team| %>
-    <h2><%= team.city %> <%= team.name %></h2>
-     <p>
-      There are <%= team.players.count %> players on this team.
-    </p>
-    <p>
-      Learn more about the <%= link_to "#{team.city} #{team.name}", house %>.
-    </p>
-  <% end %>
+  <ul>
+    <% @teams.each do |team| %>
+      <li>
+        <%= link_to "#{team.city} #{team.name}", team %>
+      </li>
+    <% end %>
+  </ul>
 <% end %>
