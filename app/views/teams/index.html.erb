@@ -1,2 +1,15 @@
-<h1>Teams#index</h1>
-<p>Find me in app/views/teams/index.html.erb</p>
+<h2>All 30 NBA Teams</h2>
+
+<% if @teams.empty? %>
+  <p>There are no players in the league. Call Adam Silver ASAP!</p>
+<% else %>
+  <% @teams.each do |team| %>
+    <h2><%= team.city %> <%= team.name %></h2>
+     <p>
+      There are <%= team.players.count %> players on this team.
+    </p>
+    <p>
+      Learn more about the <%= link_to "#{team.city} #{team.name}", house %>.
+    </p>
+  <% end %>
+<% end %>

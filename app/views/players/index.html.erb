@@ -1,2 +1,14 @@
-<h1>Players#index</h1>
-<p>Find me in app/views/players/index.html.erb</p>
+<h2>All NBA Players</h2>
+
+<% if @players.empty? %>
+ <p>There are no players in the league. Call Adam Silver ASAP!</p>
+<% else %>
+  <ul>
+    <% @players.each do |player| %>
+      <li>
+        <%= link_to "#{player.first_name} #{player.last_name}", player %> of the
+        <%= link_to "#{player.team.city} #{player.team.name}", player.team %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -1,2 +1,15 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
+<h2>Listed NBA Games</h2>
+
+<% if @games.empty? %>
+ <p>There are no available games. Call Adam Silver ASAP!</p>
+<% else %>
+  <ul>
+    <% @games.each do |game| %>
+      <li>
+        <%= game.visitor_team_id %> @ <%= game.home_team_id %>
+        Home Team Score: <%= game.home_team_score %>
+        Visitor Team Score: <%= game.visitor_team_score %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

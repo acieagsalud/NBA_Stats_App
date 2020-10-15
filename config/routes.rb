@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'seasons/index'
-  get 'seasons/show'
-  get 'games/index'
-  get 'games/show'
+  # get 'seasons/index'
+  # get 'seasons/show'
+  # get 'games/index'
+  # get 'games/show'
   # get 'players/index'
   # get 'players/show'
   # get 'about/index'
