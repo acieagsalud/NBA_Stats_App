@@ -19,15 +19,14 @@
         <h1>
           Welcome to NBA's Unofficial Stats App
         </h1>
-      </div>
-
         <p>
-          <%= link_to 'Home', root_path %> |
-          <%= link_to 'Teams', teams_path %> |
-          <%= link_to 'Players', players_path %> |
-          <%= link_to 'Seasons', seasons_path %> |
-          <%= link_to 'Games', games_path %>
+          <%= link_to 'Home', root_path, :class => "btn btn-primary btn-sm" %>
+          <%= link_to 'Teams', teams_path, :class => "btn btn-primary btn-sm" %>
+          <%= link_to 'Players', players_path, :class => "btn btn-primary btn-sm" %>
+          <%= link_to 'Seasons', seasons_path, :class => "btn btn-primary btn-sm" %>
+          <%= link_to 'Games', games_path, :class => "btn btn-primary btn-sm" %>
         </p>
+      </div>
       </header>
       <%= yield %>
       <footer>
