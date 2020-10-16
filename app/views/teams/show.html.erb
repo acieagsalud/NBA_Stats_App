@@ -1,2 +1,19 @@
-<h1>Teams#show</h1>
-<p>Find me in app/views/teams/show.html.erb</p>
+<h2>The <%= @team.city %> <%= @team.name %> (<%= @team.abbreviation %>)</h2>
+<p>
+  <% if @team.players.count == 1 %>
+    There is <%= @team.players.count %> recorded player on this team.
+  <% else %>
+    There are <%= @team.players.count %> recorded players on this team.
+  <% end %>
+</p>
+
+<h3><%= @team.name %> Players:</h3>
+<% if @team.players.empty? %>
+  <p>There are no recorded players for this team. Guess we will have to wait until draft day.</p>
+<% else %>
+  <ul>
+    <% @team.players.each do |player| %>
+      <li><%= link_to "#{player.first_name} #{player.last_name}", player %></li>
+    <% end %>
+  </ul>
+<% end %>

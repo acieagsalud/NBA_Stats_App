@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
   def index
-    @players = Player.includes(:team).order(:name)
+    @players = Player.includes(:team).order(:first_name)
   end
 
   def show

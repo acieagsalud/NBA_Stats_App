@@ -1,2 +1,13 @@
-<h1>Seasons#index</h1>
-<p>Find me in app/views/seasons/index.html.erb</p>
+<h2>NBA 2019-2020 Season Stats</h2>
+
+<% if @seasons.empty? %>
+ <p>There are no recorded seasons found. Call Adam Silver ASAP! Or Dr. Strange?</p>
+<% else %>
+  <ul>
+    <% @seasons.each do |season| %>
+      <li>
+        <%= link_to "#{season.season} stats", season %> for <%= link_to "#{season.player.first_name} #{season.player.last_name}", season.player %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
