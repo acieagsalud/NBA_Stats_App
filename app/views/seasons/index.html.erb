@@ -6,7 +6,7 @@
   <ul>
     <% @seasons.each do |season| %>
       <li>
-        <%= link_to "#{season.season} stats", season %> for <%= link_to "#{season.player.first_name} #{season.player.last_name}", season.player %>
+        <%= link_to "#{season.season} Stats", season %> for <%= link_to "#{season.player.first_name} #{season.player.last_name}", season.player %>
       </li>
     <% end %>
   </ul>

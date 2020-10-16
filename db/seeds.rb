@@ -50,7 +50,7 @@ players.each do |player_id|
                               height_feet: player['height_feet'],
                               height_inches: player['height_inches'],
                               weight: player['weight_pounds'],
-                              photo: "https://nba-players.herokuapp.com/players/#{player['first_name']}/#{player['last_name']}",
+                              photo: "https://nba-players.herokuapp.com/players/#{player['last_name']}/#{player['first_name']}",
                               api_id: player_id,
                               fav_db_character: Faker::JapaneseMedia::DragonBall.character)
   puts "Created player: #{player['first_name']} #{player['last_name']} #{current_team['name']}"
