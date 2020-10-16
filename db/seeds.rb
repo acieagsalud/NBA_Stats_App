@@ -40,7 +40,7 @@ end
 #   puts "Created team: #{team['city']} #{team['name']}"
 # end
 
-players = 1..170
+players = 1..3000
 players.each do |player_id|
   player = api_fetch(player_url(player_id))
   current_team = Team.where(:name => player['team']['name']).first
