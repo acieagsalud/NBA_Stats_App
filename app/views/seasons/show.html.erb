@@ -1,1 +1,29 @@
-<h2>2019 Season Stats for <%= @season.player.first_name %> <%= @season.player.last_name %></h2>
+<h2>
+  <%= @season.season %>-<%= @season.season + 1 %> Season Averages for
+  <%= @season.player.first_name %> <%= @season.player.last_name %>
+  (<%= link_to @season.player.team.abbreviation, @season.player.team %>)
+</h2>
+
+<img src="<%= @season.player.photo %>" alt="Photo not available">
+<ul>
+  <li>Games Played: <%= @season.games_played %></li>
+  <li>Minutes: <%= @season.min %></li>
+  <li>Points: <%= @season.pts %></li>
+  <li>Assists: <%= @season.ast %></li>
+  <li>Steals: <%= @season.stl %></li>
+  <li>Blocks: <%= @season.blk %></li>
+  <li>Field Goals Made: <%= @season.fgm %></li>
+  <li>Field Goals Attempted: <%= @season.fga %></li>
+  <li>Field Goals %: <%= @season.fg_pct %></li>
+  <li>3-points Made: <%= @season.fg3m %></li>
+  <li>3-points Attempted: <%= @season.fg3a %></li>
+  <li>3-points %: <%= @season.fg3_pct %></li>
+  <li>Free Throws Made: <%= @season.ftm %></li>
+  <li>Free Throws Attempted: <%= @season.fta %></li>
+  <li>Free Throws %: <%= @season.ft_pct %></li>
+  <li>Offensive Rebounds: <%= @season.oreb %></li>
+  <li>Defensive Rebounds: <%= @season.dreb %></li>
+  <li>Overall Rebounds: <%= @season.reb %></li>
+  <li>Turnovers: <%= @season.turnover %></li>
+  <li>Personal Fouls: <%= @season.pf %></li>
+</ul>
