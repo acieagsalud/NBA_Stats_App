@@ -1,10 +1,15 @@
 <h2><%= @player.first_name %> <%= @player.last_name %> (<%= link_to @player.team.abbreviation, @player.team %>)</h2>
 
-<img src="<%= @player.photo %>" alt="No photo available"/>
-<ul>
-  <li>Team: <%= link_to "#{@player.team.city} #{@player.team.name}", @player.team %> </li>
-  <li>Position: <%= @player.position %></li>
-  <li>Height: <%= @player.height_feet %>'<%= @player.height_inches %>"</li>
-  <li>Weight: <%= @player.weight %> lbs</li>
-  <li>Favourite Dragonball Character: <%= @player.fav_db_character %></li>
-</ul>
+<div class="container">
+  <div class="row">
+    <img src="<%= @player.photo %>" alt="No photo available"/>
+    <ul>
+      <li>Team: <%= link_to "#{@player.team.city} #{@player.team.name}", @player.team %> </li>
+      <li>Position: <%= @player.position %></li>
+      <li>Height: <%= @player.height_feet %>'<%= @player.height_inches %>"</li>
+      <li>Weight: <%= @player.weight %> lbs</li>
+      <li>Favourite Dragonball Character: <%= @player.fav_db_character %></li>
+    </ul>
+  </div>
+
+</div>

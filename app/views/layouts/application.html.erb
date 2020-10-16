@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NBA Stats App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "NBA Stats App" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "NBA Stats App" %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,7 +14,13 @@
   <body>
     <div class="container">
       <header>
-        <h1>Welcome to NBA's Unofficial Stats App</h1>
+      <div class="jumbotron text-center">
+        <img src="https://pngimg.com/uploads/nba/nba_PNG14.png" alt="" width="75">
+        <h1>
+          Welcome to NBA's Unofficial Stats App
+        </h1>
+      </div>
+
         <p>
           <%= link_to 'Home', root_path %> |
           <%= link_to 'Teams', teams_path %> |
